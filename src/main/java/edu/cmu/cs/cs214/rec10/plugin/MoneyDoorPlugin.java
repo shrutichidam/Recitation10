@@ -72,10 +72,6 @@ public class MoneyDoorPlugin implements GamePlugin {
         return framework.getSquare(x, 0) == "Door closed!";
     }
 
-    @Override
-    public boolean isMoveOver() {
-        return isGameOver() || !isGameOver();
-    }
 
     public void onMovePlayed(int x, int y) {
         int money = arr[x];
