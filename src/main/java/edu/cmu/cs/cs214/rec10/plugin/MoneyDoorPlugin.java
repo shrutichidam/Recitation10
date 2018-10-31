@@ -80,14 +80,13 @@ public class MoneyDoorPlugin implements GamePlugin {
         framework.setSquare(x, y, Integer.toString(money));
     }
 
-    public boolean isGameOver() {
+    private boolean isGameOver() {
         //Iterate through the grid and see if any doors are still opened.
         for(int i = 0;i < 10;i++) {
             if (framework.getSquare(i, 0) == "Door closed!") {
                 return false;
             }
         }
-//System.out.println("game is over");
         return true;
     }
 
